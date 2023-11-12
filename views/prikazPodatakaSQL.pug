@@ -1,0 +1,27 @@
+extends layout
+
+block layout-content
+  div.View
+    div.Message
+      div.Title
+        h1 Web-aplikacija za provjeru sigurnosti.
+        h5 1. zadatak - SQL umetanje (SQL Injection)
+        h6 Rezultati upita
+  body
+    h1 Popis korisnika
+    table
+      thead
+        tr
+          th OIB
+          th Ime
+          th Prezime
+          th Zanimanje
+      tbody
+        each user in data
+          tr
+            td= user.oib
+            td= user.ime
+            td= user.prezime
+            td= user.zanimanje
+            
+  a(href='/sqlumetanje', class='button1') Povratak na prošlu stranicu

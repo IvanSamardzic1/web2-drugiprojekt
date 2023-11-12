@@ -1,0 +1,48 @@
+extends layout
+
+block layout-content
+  div.View
+    div.Message
+      div.Title
+        h1 Web-aplikacija za provjeru sigurnosti.
+        h2 JMBAG: 0036530712
+        h5 2. zadatak - Loša autentifikacija (Broken Authentication)
+        h6 Dobrodošli na stranicu na kojoj provjeravate ranjivost loše autentifikacije.
+    body
+
+
+    label Ovo je tipični primjer loše autentifikacije kod registracija korisnika.  
+    label Ako ranjivost nije omogućena, korisnik mora unijeti lozinku koja ima barem 8 znakova, barem jedan broj i 
+    label barem jedan specijalni znak. Specijalni znakovi su: [!@#$%^&*(),.?":{}|<>].
+    label Ako je ranjivost ipak omogućena, korisnik ne mora zadovoljiti te uvjete i postavlja lozinku po svojoj želji.
+    form(action="/submitRegistracija" method="post")
+      p 
+        label(for="myCheckbox3") Ako označite checkbox, ranjivost je omogućena, a ako checkbox nije označen, ranjivost je onemogućena, odnosno uključena je zaštita.
+        input#myCheckbox3(type="checkbox" name = "myCheckbox3")
+      if error
+        div(style="color:blue; font-size: 20px;").error= error
+      p
+        label(for="korisnickoime") Upišite korisničko ime:
+        input#ime(type="text" name="korisnickoime" value=korisnickoimeValue required)
+      p
+        label(for="lozinka") Upišite lozinku:
+        input#ime(type="password" name="lozinka" value=lozinkaValue required)
+      p
+        label(for="ponovljenalozinka") Ponovno upišite lozinku:
+        input#ime(type="password" name="ponovljenalozinka" value=ponovljenalozinkaValue required)
+      p
+        label(for="ime") Upišite ime:
+        input#ime(type="text" name="ime" value=imeValue required)
+      p
+        label(for="prezime") Upišite prezime:
+        input#ime(type="text" name="prezime" value=prezimeValue required)
+      p
+        label(for="grad") Upišite grad stanovanja:
+        input#ime(type="text" name="grad" value=gradValue required)
+      p
+        a(href='/submitRegistracija') 
+        button Registracija
+      
+      
+
+      a(href='/losaautentifikacija', class='button1') Povratak na stranicu za prijavu

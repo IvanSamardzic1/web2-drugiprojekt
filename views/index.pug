@@ -1,0 +1,21 @@
+extends layout
+
+block layout-content
+  div.View
+    div.Message
+      div.Title
+        h1 Web-aplikacija za provjeru sigurnosti.
+        h2 JMBAG: 0036530712
+        h5 1. zadatak - SQL umetanje (SQL Injection)
+        h5 2. zadatak - Loša autentifikacija (Broken Authentication)
+        h6 Možete odabrati koju od ovih dvije ranjivosti želite isprobati.
+    body
+  
+
+    a(href='/sqlumetanje', class='button') Sql umetanje
+    a(href='/losaautentifikacija', class='button') Loša autentifikacija
+    
+    div
+    img(class = "moja_slika" src='slika1.jpg', alt='Sigurnost', width = "400")
+
+  

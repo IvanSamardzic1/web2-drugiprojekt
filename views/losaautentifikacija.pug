@@ -1,0 +1,45 @@
+extends layout
+
+block layout-content
+  div.View
+    div.Message
+      div.Title
+        h1 Web-aplikacija za provjeru sigurnosti.
+        h2 JMBAG: 0036530712
+        h5 2. zadatak - Loša autentifikacija (Broken Authentication)
+        h6 Dobrodošli na stranicu na kojoj provjeravate ranjivost loše autentifikacije.
+    body
+
+
+    label Ovo je tipični primjer loše autentifikacije. Upisujete korisničko ime i lozinku osobe koje tražite.
+    label Ako je ranjivost omogućena i pogriješite pri prijavi, aplikacija vam javlja u čemu ste pogriješili,
+    label no ako ranjivost nije omogućena, aplikacija javlja da su podatci neispravni. 
+    label Primjer korisničkog imena i lozinke dani su u uputama.
+    form(action="/submitPrijava" method="post")
+      p 
+        label(for="myCheckbox2") Ako označite checkbox, ranjivost je omogućena, a ako checkbox nije označen, ranjivost je onemogućena, odnosno uključena je zaštita.
+        input#myCheckbox(type="checkbox" name = "myCheckbox2")
+      if poruka
+        div(style="color:blue; font-size: 20px;").poruka= poruka
+      p
+        label(for="korisnickoime") Upišite korisničko ime:
+        input#korime(type="text" name="korisnickoime" value=korisnickoimeValue required)
+      p
+        label(for="lozinka") Upišite lozinku:
+        input#lozinka(type="password" name="lozinka" value=lozinkaValue required)
+
+      p
+        a(href='/submitPrijava') 
+        button Prijava
+      
+      if error
+        div(style="color:blue; font-size: 20px;").error= error
+      
+      p Nemate račun? Registrirajte se!
+      a(href='/registracija', class='button1') Registracija
+
+      a(href='/', class='button1') Povratak na početnu stranicu
+
+      
+
+  

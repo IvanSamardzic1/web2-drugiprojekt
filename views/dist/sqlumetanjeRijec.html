@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title> | WHATABYTE</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="View">
+        <div class="Message">
+          <div class="Title">
+            <h1>Web-aplikacija za provjeru sigurnosti.</h1>
+            <h5>1. zadatak - SQL umetanje (SQL Injection)</h5>
+            <h6>Dobrodošli na stranicu na kojoj provjeravate ranjivost sql umetanja pomoću znakovnog atributa.</h6>
+          </div>
+        </div>
+        <body></body>
+        <label>Ovo je tipični primjer SQL ubacivanja. Upisujete nadimak osobe koje tražite, a kad se za nadimak upiše </label>
+        <label>' OR ''=', detektira se SQL ubacivanje. Primjer nadimka koji je već u bazi je greatstudent i kad ga upišete dobit ćete podatke o toj osobi. </label>
+        <form action="/submitRijec" method="post">
+          <p> 
+            <label for="myCheckbox1">Ako označite checkbox, ranjivost je omogućena, a ako checkbox nije označen, ranjivost je onemogućena, odnosno uključena je zaštita.</label>
+            <input id="myCheckbox" type="checkbox" name="myCheckbox1">
+          </p>
+          <p>
+            <label for="nadimak">Upišite nadimak osobe za koju želite doznati podatke:</label>
+            <input id="ime" type="text" name="nadimak" required>
+          </p>
+          <p><a href="/submitRijec"> </a>
+            <button>Dohvati korisnika</button>
+          </p><a class="button1" href="/sqlumetanje">SQL injection sa numeričkim atributom</a><a class="button1" href="/">Povratak na početnu stranicu</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

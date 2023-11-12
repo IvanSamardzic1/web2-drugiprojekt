@@ -1,0 +1,25 @@
+extends layout
+
+block layout-content
+  div.View
+    div.Message
+      div.Title
+        h1 Web-aplikacija za provjeru sigurnosti.
+        h5 2. zadatak - Loša autentifikacija (Broken Authentication)
+        h6 USPJEŠNO STE AUTENTIFICIRANI
+  body
+    h1 Informacije o korisniku
+    table
+      thead
+        tr
+          th Ime
+          th Prezime
+          th Grad
+      tbody
+        each user in data
+          tr
+            td= user.ime
+            td= user.prezime
+            td= user.grad
+            
+  a(href='/losaautentifikacija', class='button1') Povratak na prošlu stranicu

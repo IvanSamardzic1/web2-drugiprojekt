@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title> | WHATABYTE</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="View">
+        <div class="Message">
+          <div class="Title">
+            <h1>Web-aplikacija za provjeru sigurnosti.</h1>
+            <h5>1. zadatak - SQL umetanje (SQL Injection)</h5>
+            <h6>Dobrodošli na stranicu na kojoj provjeravate ranjivost sql umetanja pomoću numeričkog atributa.</h6>
+          </div>
+        </div>
+        <body></body>
+        <label>Ovo je tipični primjer SQL ubacivanja. Upisujete OIB osobe koje tražite, a kad se za OIB upiše </label>
+        <label>22233344455' OR '1'='1, detektira se SQL ubacivanje. Primjer OIB-a koji je već u bazi je 22233344455 i kad ga upišete dobit ćete podatke o toj osobi. </label>
+        <form action="/submit" method="post">
+          <p> 
+            <label for="myCheckbox">Ako označite checkbox, ranjivost je omogućena, a ako checkbox nije označen, ranjivost je onemogućena, odnosno uključena je zaštita.</label>
+            <input id="myCheckbox" type="checkbox" name="myCheckbox">
+          </p>
+          <p>
+            <label for="oib">Upišite OIB osobe za koju želite doznati podatke:</label>
+            <input id="ime" type="text" name="oib" required>
+          </p>
+          <p><a href="/submit"> </a>
+            <button>Dohvati korisnika</button>
+          </p>
+          <label>Ovo je bilo testiranje pomoću numeričkog atributa, a</label>
+          <label>klikom na sljedeći gumb otvara se stranica na kojem se provodi testiranje sa znakovnim atributom</label><a class="button1" href="/sqlumetanjeRijec">SQL injection sa znakovnim atributom</a><a class="button1" href="/">Povratak na početnu stranicu</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

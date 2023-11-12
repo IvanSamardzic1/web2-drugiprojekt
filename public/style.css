@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f3f5; 
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  
+  input[type="text"],
+  textarea {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  input[type="password"],
+  textarea {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .View {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .Banner {
+    color: #333;
+  }
+  
+  .Message {
+    background-color: #cfd8dc; 
+    padding: 20px;
+    border: 1px solid #90a4ae; 
+    margin-bottom: 20px;
+  }
+  
+  .Title {
+    font-size: 24px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  
+  th, td {
+    border: 1px solid #b0bec5; 
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #d6e2e9; 
+  }
+  
+  .button {
+    display: inline-block;
+    border: 1px solid #607d8b;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #90a4ae; 
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin: 10px;
+  }
+  
+  .button:hover {
+    background-color: #78909c; 
+  }
+  
+  .button1 {
+    display: block;
+    border: 1px solid #607d8b; 
+    margin: 0 auto;
+    width: fit-content;
+    background-color: #90a4ae; 
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+  }

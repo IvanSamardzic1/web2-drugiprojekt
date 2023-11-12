@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title> | WHATABYTE</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="View">
+        <div class="Message">
+          <div class="Title">
+            <h1>Web-aplikacija za provjeru sigurnosti.</h1>
+            <h2>JMBAG: 0036530712</h2>
+            <h5>2. zadatak - Loša autentifikacija (Broken Authentication)</h5>
+            <h6>Dobrodošli na stranicu na kojoj provjeravate ranjivost loše autentifikacije.</h6>
+          </div>
+        </div>
+        <body></body>
+        <label>Ovo je tipični primjer loše autentifikacije. Upisujete korisničko ime i lozinku osobe koje tražite.  </label>
+        <form action="/submitPrijava" method="post">
+          <p> 
+            <label for="myCheckbox2">Ako označite checkbox, ranjivost je omogućena, a ako checkbox nije označen, ranjivost je onemogućena, odnosno uključena je zaštita.</label>
+            <input id="myCheckbox" type="checkbox" name="myCheckbox2">
+          </p>
+          <p>
+            <label for="korisnickoime">Upišite korisničko ime:</label>
+            <input id="korime" type="text" name="korisnickoime" required>
+          </p>
+          <p>
+            <label for="lozinka">Upišite lozinku:</label>
+            <input id="lozinka" type="password" name="lozinka" required>
+          </p>
+          <p><a href="/submitPrijava"> </a>
+            <button>Prijava</button>
+          </p>
+          <p>Nemate račun? Registrirajte se!</p><a class="button1" href="/registracija">Registracija</a><a class="button1" href="/">Povratak na početnu stranicu</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

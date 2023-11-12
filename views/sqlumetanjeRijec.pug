@@ -1,0 +1,32 @@
+extends layout
+
+block layout-content
+  div.View
+    div.Message
+      div.Title
+        h1 Web-aplikacija za provjeru sigurnosti.
+        h5 1. zadatak - SQL umetanje (SQL Injection)
+        h6 Dobrodošli na stranicu na kojoj provjeravate ranjivost sql umetanja pomoću znakovnog atributa.
+    body
+    label Ovo je tipični primjer SQL ubacivanja. Upisujete nickname osobe koje tražite, a kad se za nadimak upiše 
+    label ' OR ''=', detektira se SQL ubacivanje. Primjer nickname-a koji je već u bazi je bigbrain i kad ga upišete dobit ćete podatke o toj osobi. 
+    
+    form(action="/submitRijec" method="post")
+      p 
+        label(for="myCheckbox1") Ako označite checkbox, ranjivost je omogućena, a ako checkbox nije označen, ranjivost je onemogućena, odnosno uključena je zaštita.
+        input#myCheckbox(type="checkbox" name = "myCheckbox1")
+      p
+        label(for="nadimak") Upišite nadimak osobe za koju želite doznati podatke:
+        input#ime(type="text" name="nadimak" value=nadimakValue required)
+
+      p
+        a(href='/submitRijec') 
+        button Dohvati korisnika
+
+      if error
+        div(style="color:blue; font-size: 20px;").error= error
+
+      
+      a(href='/sqlumetanje', class='button1') SQL injection sa numeričkim atributom
+      a(href='/', class='button1') Povratak na početnu stranicu
+  

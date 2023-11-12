@@ -1,0 +1,32 @@
+extends layout
+
+block layout-content
+  div.View
+    div.Message
+      div.Title
+        h1 Web-aplikacija za provjeru sigurnosti.
+        h5 1. zadatak - SQL umetanje (SQL Injection)
+        h6 Dobrodošli na stranicu na kojoj provjeravate ranjivost sql umetanja pomoću numeričkog atributa.
+    body
+    label Ovo je tipični primjer SQL ubacivanja. Upisujete OIB osobe koje tražite, a kad se za OIB upiše 
+    label 22233344455' OR '1'='1, detektira se SQL ubacivanje. Primjer OIB-a koji je već u bazi je 22233344455 i kad ga upišete dobit ćete podatke o toj osobi. 
+    form(action="/submit" method="post")
+      p 
+        label(for="myCheckbox") Ako označite checkbox, ranjivost je omogućena, a ako checkbox nije označen, ranjivost je onemogućena, odnosno uključena je zaštita.
+        input#myCheckbox(type="checkbox" name = "myCheckbox")
+      p
+        label(for="oib") Upišite OIB osobe za koju želite doznati podatke:
+        input#ime(type="text" name="oib" value=oibValue required)
+
+      p
+        a(href='/submit') 
+        button Dohvati korisnika
+
+      if error
+        div(style="color:blue; font-size: 20px;").error= error
+
+      label Ovo je bilo testiranje pomoću numeričkog atributa, a
+      label klikom na sljedeći gumb otvara se stranica na kojem se provodi testiranje sa znakovnim atributom
+      a(href='/sqlumetanjeRijec', class='button1') SQL injection sa znakovnim atributom
+      a(href='/', class='button1') Povratak na početnu stranicu
+  
